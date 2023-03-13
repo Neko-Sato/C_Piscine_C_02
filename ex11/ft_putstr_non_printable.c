@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: satoneko <satoneko@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/12 17:52:36 by satoneko          #+#    #+#             */
-/*   Updated: 2023/03/12 17:53:20 by satoneko         ###   ########.fr       */
+/*   Created: 2023/03/12 17:52:36 by hshimizu          #+#    #+#             */
+/*   Updated: 2023/03/13 14:01:48 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
