@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/12 15:48:43 by hshimizu          #+#    #+#             */
-/*   Updated: 2023/03/13 14:01:48 by hshimizu         ###   ########.fr       */
+/*   Created: 2023/03/12 15:48:43 by satoneko          #+#    #+#             */
+/*   Updated: 2023/03/13 22:58:29 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,13 +63,18 @@ void	*ft_print_memory(void *addr, unsigned int size)
 	void	*_addr;
 
 	_addr = addr;
-	while (1)
+	while (_addr + size > addr)
 	{
 		ft_print_memory_line(addr, _addr + size - addr);
 		addr += 0x10;
 		write(1, "\n", 1);
-		if (_addr + size <= addr)
-			break ;
 	}
 	return (addr);
+}
+
+int	main(void)
+{
+	char a[] = "fhs oif vois h\0fO hf;o";
+	ft_print_memory(a, 25);
+	return (0);
 }
