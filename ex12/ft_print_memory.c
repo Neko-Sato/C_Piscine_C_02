@@ -6,13 +6,14 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 15:48:43 by satoneko          #+#    #+#             */
-/*   Updated: 2023/03/14 13:24:34 by hshimizu         ###   ########.fr       */
+/*   Updated: 2023/03/14 17:28:28 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#define ULONG unsigned long long
 
-void	print_hex_num(int num, int fill)
+void	print_hex_num(ULONG num, int fill)
 {
 	char	c;
 
@@ -41,7 +42,7 @@ void	*ft_print_memory_line(void *addr, unsigned int size)
 	void	*_addr;
 
 	_addr = addr;
-	print_hex_num((long)_addr, 0x10);
+	print_hex_num((ULONG)_addr, 0x10);
 	write(1, ": ", 2);
 	while (addr < _addr + 0x10)
 	{
@@ -49,7 +50,7 @@ void	*ft_print_memory_line(void *addr, unsigned int size)
 			print_hex_num(*(char *)addr, 0b10);
 		else
 			write(1, "  ", 2);
-		if (((long)addr - (long)_addr) % 2)
+		if (((ULONG)addr - (ULONG)_addr) % 2)
 			write(1, " ", 1);
 		addr++;
 	}
