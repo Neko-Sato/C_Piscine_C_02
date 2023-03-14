@@ -6,7 +6,7 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 15:48:43 by satoneko          #+#    #+#             */
-/*   Updated: 2023/03/13 22:58:29 by hshimizu         ###   ########.fr       */
+/*   Updated: 2023/03/14 13:24:34 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,11 +70,4 @@ void	*ft_print_memory(void *addr, unsigned int size)
 		write(1, "\n", 1);
 	}
 	return (addr);
-}
-
-int	main(void)
-{
-	char a[] = "fhs oif vois h\0fO hf;o";
-	ft_print_memory(a, 25);
-	return (0);
 }

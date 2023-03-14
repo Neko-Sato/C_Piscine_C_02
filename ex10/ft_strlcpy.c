@@ -6,22 +6,28 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 13:48:58 by satoneko          #+#    #+#             */
-/*   Updated: 2023/03/13 23:17:00 by hshimizu         ###   ########.fr       */
+/*   Updated: 2023/03/14 13:51:07 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+unsigned int	ft_strlen(char *str)
+{
+	unsigned int	i;
+
+	i = 0;
+	while (*(str + i))
+		i++;
+	return (i);
+}
+
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	unsigned int	n;
 
-	n = 0;
-	while (n < (size - 1) && !*src)
-	{
+	n = ft_strlen(src);
+	while (1 < size--)
 		*(dest++) = *(src++);
-		n++;
-	}
-	*dest = '\0';
 	return (n);
 }
